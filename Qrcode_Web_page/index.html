@@ -1,0 +1,184 @@
+<html>
+<head>
+  <meta name="description" content="QR Code scanner" />
+  <meta name="keywords" content="scanner,barcode" />
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/bootstrap.min.css" >
+<link rel="stylesheet" href="css/bootstrap.css" > 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <style>
+<title>QR Scanner</title>
+
+<style type="text/css">
+body, html {
+            height: 100%;
+            width: 100%;
+    
+        }
+        .bg {
+            background-image: url("images/bg.jpg");
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+
+#mainbody{
+    background: white;
+    width:100%;
+	display:none;
+}
+
+#v{
+    width:320px;
+    height:240px;
+}
+#qr-canvas{
+    display:none;
+}
+#qrfile{
+    width:320px;
+    height:240px;
+}
+#mp1{
+    text-align:center;
+    font-size:35px;
+}
+#imghelp{
+    position:relative;
+    left:0px;
+    top:-160px;
+    z-index:100;
+    font:18px arial,sans-serif;
+    background:#f0f0f0;
+	margin-left:35px;
+	margin-right:35px;
+	padding-top:10px;
+	padding-bottom:10px;
+	border-radius:20px;
+}
+
+#outdiv
+{
+    width:320px;
+    height:240px;
+	border: solid;
+	border-width: 3px 3px 3px 3px;
+}
+#result{
+    border: solid;
+	border-width: 1px 1px 1px 1px;
+	padding:20px;
+	width:70%;
+}
+
+
+
+
+</style>
+
+<script type="text/javascript" src="llqrcode.js"></script>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="webqr.js"></script>
+</head>
+<body >
+<header>
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="img/logo.jpg" alt="" width="150" height="40">
+  </a>
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+ 
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Scan <span class="sr-only">(current)</span></a>
+      </li>
+	  <li class="nav-item active">
+        <a class="nav-link" href="./Decode/index.php">Decode<span class="sr-only">(current)</span></a>
+      </li>
+	  <li class="nav-item active">
+        <a class="nav-link" href="./Generate/index.php">Generate <span class="sr-only">(current)</span></a>
+      </li>
+     
+    </ul>
+   
+  </div>
+</nav>
+
+</header>
+   <div  class="bg">
+        <br><br><br>
+        <div class="row container">
+            <div class="col-md-6 offset-md-3" style="background-color: white; padding: 20px; box-shadow: 10px 10px 5px #888;">
+                <div class="panel-heading">
+                    <h1>QR codes Scanner</h1>
+                </div>
+                <hr>
+               <table class="tsel" border="0" width="100%">
+<tr>
+<td valign="top" align="center" width="50%">
+	<table class="tsel" border="0">
+		<tr>
+			<td colspan="2" align="center">
+				<div id="outdiv">
+				</div>	
+			</td>
+		</tr>
+	</table>
+</td>
+</tr>
+
+<tr>
+<td colspan="3" align="center">
+<br><br>
+<div id="result"></div>
+</td></tr>
+</table>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+<div id="main">
+<div id="header">
+
+</div>
+<div id="mainbody">
+
+</div>
+<canvas id="qr-canvas" width="800" height="600"></canvas>
+<script type="text/javascript">load();</script>
+</body>
+<script src="js/jquery-3.3.1.min.js" ></script>
+<script src="js/bootstrap.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"  ></script>
+
+</html>
